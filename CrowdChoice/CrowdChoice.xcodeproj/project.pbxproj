@@ -14,8 +14,6 @@
 		7427BA72183D0A3100C2F048 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7427BA71183D0A3100C2F048 /* main.m */; };
 		7427BA76183D0A3100C2F048 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7427BA75183D0A3100C2F048 /* CCAppDelegate.m */; };
 		7427BA79183D0A3100C2F048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7427BA77183D0A3100C2F048 /* Main.storyboard */; };
-		7427BA7C183D0A3100C2F048 /* CCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7427BA7B183D0A3100C2F048 /* CCMasterViewController.m */; };
-		7427BA7F183D0A3100C2F048 /* CCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7427BA7E183D0A3100C2F048 /* CCDetailViewController.m */; };
 		7427BA81183D0A3100C2F048 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7427BA80183D0A3100C2F048 /* Images.xcassets */; };
 		7427BA88183D0A3100C2F048 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BA87183D0A3100C2F048 /* XCTest.framework */; };
 		7427BA89183D0A3100C2F048 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BA65183D0A3100C2F048 /* Foundation.framework */; };
@@ -46,10 +44,6 @@
 		7427BA74183D0A3100C2F048 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		7427BA75183D0A3100C2F048 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
 		7427BA78183D0A3100C2F048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7427BA7A183D0A3100C2F048 /* CCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMasterViewController.h; sourceTree = "<group>"; };
-		7427BA7B183D0A3100C2F048 /* CCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMasterViewController.m; sourceTree = "<group>"; };
-		7427BA7D183D0A3100C2F048 /* CCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCDetailViewController.h; sourceTree = "<group>"; };
-		7427BA7E183D0A3100C2F048 /* CCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCDetailViewController.m; sourceTree = "<group>"; };
 		7427BA80183D0A3100C2F048 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7427BA86183D0A3100C2F048 /* CrowdChoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdChoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7427BA87183D0A3100C2F048 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -118,10 +112,6 @@
 				7427BA74183D0A3100C2F048 /* CCAppDelegate.h */,
 				7427BA75183D0A3100C2F048 /* CCAppDelegate.m */,
 				7427BA77183D0A3100C2F048 /* Main.storyboard */,
-				7427BA7A183D0A3100C2F048 /* CCMasterViewController.h */,
-				7427BA7B183D0A3100C2F048 /* CCMasterViewController.m */,
-				7427BA7D183D0A3100C2F048 /* CCDetailViewController.h */,
-				7427BA7E183D0A3100C2F048 /* CCDetailViewController.m */,
 				7427BA80183D0A3100C2F048 /* Images.xcassets */,
 				7427BA6C183D0A3100C2F048 /* Supporting Files */,
 			);
@@ -255,10 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7427BA7C183D0A3100C2F048 /* CCMasterViewController.m in Sources */,
 				7427BA76183D0A3100C2F048 /* CCAppDelegate.m in Sources */,
 				7427BA72183D0A3100C2F048 /* main.m in Sources */,
-				7427BA7F183D0A3100C2F048 /* CCDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +455,7 @@
 				7427BA99183D0A3100C2F048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7427BA9A183D0A3100C2F048 /* Build configuration list for PBXNativeTarget "CrowdChoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +464,7 @@
 				7427BA9C183D0A3100C2F048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
