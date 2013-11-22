@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Home-->
+        <!--Home View Controller - Home-->
         <scene sceneID="jdR-La-yRL">
             <objects>
-                <viewController id="lEY-va-X8q" sceneMemberID="viewController">
+                <viewController id="lEY-va-X8q" customClass="CCHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8EV-Ob-4l8"/>
                         <viewControllerLayoutGuide type="bottom" id="h6h-Dh-srf"/>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="374" y="-1196"/>
         </scene>
-        <!--View Controller - Browse-->
+        <!--Browse View Controller - Browse-->
         <scene sceneID="RoM-AJ-uAu">
             <objects>
-                <viewController id="gjY-uf-cxy" sceneMemberID="viewController">
+                <viewController id="gjY-uf-cxy" customClass="CCBrowseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5yg-rH-ih1"/>
                         <viewControllerLayoutGuide type="bottom" id="lCu-AZ-a2N"/>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="374" y="-493"/>
         </scene>
-        <!--View Controller - New-->
+        <!--Add View Controller - New-->
         <scene sceneID="zUS-DG-Ll0">
             <objects>
-                <viewController id="S4n-Er-Jwp" sceneMemberID="viewController">
+                <viewController id="S4n-Er-Jwp" customClass="CCAddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bNu-Tp-uqu"/>
                         <viewControllerLayoutGuide type="bottom" id="V76-cj-ZEY"/>
