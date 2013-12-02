@@ -8,6 +8,7 @@
 
 #import "CCBrowseViewController.h"
 #import "CCBrowseTableViewCell.h"
+#import "CCBracketViewController.h"
 #import <Parse/Parse.h>
 
 @interface CCBrowseViewController ()
@@ -128,6 +129,19 @@
     }
     [self.browseTableView reloadData];
   }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //Initialize new viewController
+    CCBracketViewController *viewController = [[CCBracketViewController alloc] initWithNibName:@"CCBracketViewController" bundle:nil];
+    viewController.parseObj = [self.bracketObjects objectAtIndex:indexPath.row];
+    
+    //Pass selected value to a property declared in NewViewController
+    //viewController.valueToPrint = selectedValue;
+    //Push new view to navigationController stack
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
