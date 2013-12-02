@@ -22,6 +22,13 @@
   }
   return self;
 }
+
+- (IBAction)saveBracket:(UIButton *)sender {
+    //create a new class in parse.
+    //create a new entry in the brackets table.
+    
+}
+
 - (IBAction)pickPhoto:(UIButton *)sender
 {
   // If the device does not have a camera, there is no reason to give the user an option.
