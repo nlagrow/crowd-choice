@@ -7,6 +7,7 @@
 //
 
 #import "CCAddViewController.h"
+#import <Parse/Parse.h>
 
 @interface CCAddViewController ()
 
@@ -73,6 +74,10 @@
   self.questionField.delegate = self;
   
   self.mainImage.contentMode = UIViewContentModeScaleAspectFit;
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
 }
 
 - (void)didReceiveMemoryWarning
