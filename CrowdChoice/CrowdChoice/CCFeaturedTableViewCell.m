@@ -26,4 +26,17 @@
     // Configure the view for the selected state
 }
 
+- (void)setParseObj:(PFObject *)parseObj
+{
+  _parseObj = parseObj;
+  self.bracketTitle.text = parseObj[@"question"];
+  
+  [_parseObj[@"picture"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+    if (!error) {
+      UIImage *image = [UIImage imageWithData:data];
+      [self.bracketImage setImage: image];
+    }
+  }];
+}
+
 @end
