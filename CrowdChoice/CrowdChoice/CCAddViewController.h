@@ -12,7 +12,8 @@
                                                    UIImagePickerControllerDelegate,
                                                    UIActionSheetDelegate,
                                                    UITextViewDelegate,
-                                                   UITextFieldDelegate>
+                                                   UITextFieldDelegate,
+                                                   UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *questionField;
 @property (strong, nonatomic) IBOutlet UIImageView *mainImage;
