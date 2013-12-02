@@ -31,7 +31,6 @@
 		74CE562D184C577C004AE4C6 /* CCFeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */; };
 		74CE562F184C57A0004AE4C6 /* CCAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */; };
 		74CE5631184C6824004AE4C6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE5630184C6824004AE4C6 /* Parse.framework */; };
-		74CE5634184C73CB004AE4C6 /* CCFeaturedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE5633184C73CB004AE4C6 /* CCFeaturedTableViewController.m */; };
 		CA92CEA4184C5FD100EBF32B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA3184C5FD100EBF32B /* Parse.framework */; };
 		CA92CEA6184C602F00EBF32B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA5184C602F00EBF32B /* AudioToolbox.framework */; };
 		CA92CEA8184C603400EBF32B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA7184C603400EBF32B /* CFNetwork.framework */; };
@@ -89,8 +88,6 @@
 		74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCFeaturedTableViewCell.xib; sourceTree = "<group>"; };
 		74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCAddTableViewCell.xib; sourceTree = "<group>"; };
 		74CE5630184C6824004AE4C6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		74CE5632184C73CB004AE4C6 /* CCFeaturedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFeaturedTableViewController.h; sourceTree = "<group>"; };
-		74CE5633184C73CB004AE4C6 /* CCFeaturedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFeaturedTableViewController.m; sourceTree = "<group>"; };
 		CA92CEA3184C5FD100EBF32B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CA92CEA5184C602F00EBF32B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CA92CEA7184C603400EBF32B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -188,8 +185,6 @@
 				74B98BFE183FFE5000F3B6F8 /* CCBrowseTableViewCell.h */,
 				74CE562A184C5762004AE4C6 /* CCBrowseTableViewCell.xib */,
 				74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */,
-				74CE5632184C73CB004AE4C6 /* CCFeaturedTableViewController.h */,
-				74CE5633184C73CB004AE4C6 /* CCFeaturedTableViewController.m */,
 				74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */,
 				74B98BFF183FFE5000F3B6F8 /* CCBrowseTableViewCell.m */,
 				74B98C01183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.h */,
@@ -347,7 +342,6 @@
 				74B98C03183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.m in Sources */,
 				7427BA76183D0A3100C2F048 /* CCAppDelegate.m in Sources */,
 				74B98BFA183FFDDB00F3B6F8 /* CCAddViewController.m in Sources */,
-				74CE5634184C73CB004AE4C6 /* CCFeaturedTableViewController.m in Sources */,
 				7427BA72183D0A3100C2F048 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

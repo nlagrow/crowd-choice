@@ -44,10 +44,6 @@
   [self.homeTableView registerNib:[UINib nibWithNibName:@"CCFeaturedTableViewCell" bundle:nil] forCellReuseIdentifier:@"CCFeaturedTableViewCell"];
   
   [self loadObjects];
-
-  
-  //CCFeaturedTableViewController *ftv_controller = [[CCFeaturedTableViewController alloc] init];
-  //[self.homeTableView setDelegate:ftv_controller];
   
     PFQuery *query = [PFQuery queryWithClassName:@"Brackets"];
     [query orderByAscending:@"votes"];
@@ -127,12 +123,9 @@
   PFQuery *brackets_query = [PFQuery queryWithClassName:@"Brackets"];
   [brackets_query orderByDescending:@"createdAt"];
   [brackets_query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-    NSLog(@"hi");
     if (!error)
     {
-      NSLog(@"helllooooo");
       self.bracketObjects = [objects subarrayWithRange:NSMakeRange(0, 3)];
-      NSLog(@"%@", self.bracketObjects);
     }
     [self.homeTableView reloadData];
   }];

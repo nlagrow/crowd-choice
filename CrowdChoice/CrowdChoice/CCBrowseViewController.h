@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCBrowseViewController : UIViewController
+@interface CCBrowseViewController : UIViewController <UITableViewDelegate,
+                                                      UITableViewDataSource>
 
 @end
