@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCAddViewController : UIViewController <UIImagePickerControllerDelegate,
+@interface CCAddViewController : UIViewController <UINavigationControllerDelegate,
+                                                   UIImagePickerControllerDelegate,
+                                                   UIActionSheetDelegate,
                                                    UITextViewDelegate,
                                                    UITextFieldDelegate>
 

@@ -27,6 +27,9 @@
 		74B98C03183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B98C02183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.m */; };
 		74B98C06183FFE8300F3B6F8 /* CCAddTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B98C05183FFE8300F3B6F8 /* CCAddTableViewCell.m */; };
 		74CE56291846F11F004AE4C6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 74CE56281846F11F004AE4C6 /* logo.png */; };
+		74CE562B184C5762004AE4C6 /* CCBrowseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE562A184C5762004AE4C6 /* CCBrowseTableViewCell.xib */; };
+		74CE562D184C577C004AE4C6 /* CCFeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */; };
+		74CE562F184C57A0004AE4C6 /* CCAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		74B98C04183FFE8300F3B6F8 /* CCAddTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAddTableViewCell.h; sourceTree = "<group>"; };
 		74B98C05183FFE8300F3B6F8 /* CCAddTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAddTableViewCell.m; sourceTree = "<group>"; };
 		74CE56281846F11F004AE4C6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		74CE562A184C5762004AE4C6 /* CCBrowseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCBrowseTableViewCell.xib; sourceTree = "<group>"; };
+		74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCFeaturedTableViewCell.xib; sourceTree = "<group>"; };
+		74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCAddTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,9 @@
 				7427BA75183D0A3100C2F048 /* CCAppDelegate.m */,
 				7427BA77183D0A3100C2F048 /* Main.storyboard */,
 				74B98BFE183FFE5000F3B6F8 /* CCBrowseTableViewCell.h */,
+				74CE562A184C5762004AE4C6 /* CCBrowseTableViewCell.xib */,
+				74CE562C184C577C004AE4C6 /* CCFeaturedTableViewCell.xib */,
+				74CE562E184C57A0004AE4C6 /* CCAddTableViewCell.xib */,
 				74B98BFF183FFE5000F3B6F8 /* CCBrowseTableViewCell.m */,
 				74B98C01183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.h */,
 				74B98C02183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.m */,
@@ -257,9 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CE562F184C57A0004AE4C6 /* CCAddTableViewCell.xib in Resources */,
 				74CE56291846F11F004AE4C6 /* logo.png in Resources */,
+				74CE562D184C577C004AE4C6 /* CCFeaturedTableViewCell.xib in Resources */,
 				7427BA81183D0A3100C2F048 /* Images.xcassets in Resources */,
 				7427BA70183D0A3100C2F048 /* InfoPlist.strings in Resources */,
+				74CE562B184C5762004AE4C6 /* CCBrowseTableViewCell.xib in Resources */,
 				7427BA79183D0A3100C2F048 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

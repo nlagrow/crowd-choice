@@ -16,11 +16,25 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
+}
+- (IBAction)pickPhoto:(UIButton *)sender
+{
+  // If the device does not have a camera, there is no reason to give the user an option.
+  if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    [self presentImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    return;
+  }
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Photo Picker"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                             destructiveButtonTitle:nil
+                                                  otherButtonTitles:@"Photo Library", @"Take Photo", nil];
+  [actionSheet showInView:self.view];
 }
 
 - (void)viewDidLoad
@@ -53,17 +67,53 @@
   return YES;
 }
 
-/*- (IBAction)mainImageButton:(id)sender {
-  UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-  imagePicker.delegate = self;
+- (void)presentImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+{
+  UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+  imagePickerController.delegate = self;
+  imagePickerController.sourceType = sourceType;
+  imagePickerController.allowsEditing = YES;
+  [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
+#pragma mark -
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+  // do nothing if the user cancels
+  if (buttonIndex == actionSheet.cancelButtonIndex) {
+    return;
+  }
+  [self presentImagePickerForSourceType:(buttonIndex == 0) ? UIImagePickerControllerSourceTypePhotoLibrary :
+   UIImagePickerControllerSourceTypeCamera];
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet
+{
+  // no-op
+}
+
+#pragma mark -
+#pragma mark UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+  self.mainImage.image = [info objectForKey:UIImagePickerControllerEditedImage];
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+@end
 
 
 
 
-
-- (void)presentImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+/*- (void)presentImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
 {
   UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
   imagePickerController.delegate = self;
@@ -122,16 +172,3 @@
 }
 
 @end*/
-
-
-
-
-
-
-
-
-
-
-
-
-@end
