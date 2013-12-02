@@ -159,6 +159,9 @@
                                 <state key="normal" title="Add another option">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addOption:" destination="S4n-Er-Jwp" eventType="touchUpInside" id="lig-a6-E8e"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TEB-Yc-tZq">
                                 <rect key="frame" x="20" y="307" width="280" height="106"/>

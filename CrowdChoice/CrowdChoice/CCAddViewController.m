@@ -22,6 +22,28 @@
   }
   return self;
 }
+
+- (IBAction)addOption:(id)sender {
+  UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"INPUT BELOW" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add",nil];
+  alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+  UITextField * alertTextField = [alert textFieldAtIndex:0];
+  alertTextField.keyboardType = UIKeyboardTypeDefault;
+  alertTextField.placeholder = @"Enter the option name";
+  [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == 0) {
+    NSLog(@"Cancel Tapped.");
+  }
+  else if (buttonIndex == 1) {
+    NSLog(@"Add Tapped.");
+    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+  }
+}
+
+
+
 - (IBAction)pickPhoto:(UIButton *)sender
 {
   // If the device does not have a camera, there is no reason to give the user an option.
