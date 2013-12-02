@@ -189,6 +189,7 @@
                     <navigationItem key="navigationItem" id="86N-Bx-jJc"/>
                     <connections>
                         <outlet property="mainImage" destination="4K4-Z7-hlV" id="TGa-VL-xDN"/>
+                        <outlet property="optionsTable" destination="TEB-Yc-tZq" id="hWQ-6p-oBe"/>
                         <outlet property="questionField" destination="RNb-K1-WS4" id="Abx-4c-qPF"/>
                     </connections>
                 </viewController>
