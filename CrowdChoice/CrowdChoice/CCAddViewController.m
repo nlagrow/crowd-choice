@@ -39,7 +39,6 @@
     newEntry[@"picture"] = imageFile;
     [newEntry saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         self.placeHolder = newEntry.objectId;
-        NSLog(self.placeHolder);
             self.questionField.text = @"";
             self.mainImage.image = NULL;
             [self.bracketOptions removeAllObjects];
