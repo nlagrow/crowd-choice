@@ -53,7 +53,7 @@
   return YES;
 }
 
-- (IBAction)mainImageButton:(id)sender {
+/*- (IBAction)mainImageButton:(id)sender {
   UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
   imagePicker.delegate = self;
 }
@@ -121,7 +121,7 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-@end
+@end*/
 
 
 
