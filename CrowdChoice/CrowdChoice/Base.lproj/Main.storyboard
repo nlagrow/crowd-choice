@@ -90,13 +90,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="l5I-OX-gv5" kind="relationship" relationship="viewControllers" id="6aR-sz-9SY"/>
-                        <segue destination="gjY-uf-cxy" kind="relationship" relationship="viewControllers" id="lTO-4h-Lvi"/>
-                        <segue destination="S4n-Er-Jwp" kind="relationship" relationship="viewControllers" id="sEV-RM-Q5y"/>
+                        <segue destination="8Hg-8k-FTf" kind="relationship" relationship="viewControllers" id="xfx-0J-UIM"/>
+                        <segue destination="S4n-Er-Jwp" kind="relationship" relationship="viewControllers" id="ywX-GS-lRA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqc-U5-k8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-666" y="-452"/>
+        </scene>
+        <!--Navigation Controller - Browse-->
+        <scene sceneID="uST-bz-aGr">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8Hg-8k-FTf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" id="Wjz-HY-2Im"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tev-of-ule">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gjY-uf-cxy" kind="relationship" relationship="rootViewController" id="X3q-73-bnY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oog-PM-FFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-258"/>
         </scene>
         <!--Browse View Controller - Browse-->
         <scene sceneID="RoM-AJ-uAu">
@@ -130,13 +146,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Browse" id="Bhg-WZ-YKF"/>
+                    <navigationItem key="navigationItem" id="Q4s-xR-cD3"/>
                     <connections>
                         <outlet property="browseTableView" destination="pUc-mI-UKe" id="TyQ-aY-5R9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT9-Wa-wA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-198" y="-277"/>
+            <point key="canvasLocation" x="158" y="-285"/>
         </scene>
         <!--Add View Controller - New-->
         <scene sceneID="zUS-DG-Ll0">
