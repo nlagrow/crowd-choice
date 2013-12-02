@@ -49,6 +49,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="HPU-pB-Fat"/>
+                    <navigationItem key="navigationItem" id="KnG-cU-oxS"/>
                     <connections>
                         <outlet property="featuredImage" destination="XNX-AY-Wqm" id="JdN-K6-P3c"/>
                         <outlet property="featuredTitle" destination="hnj-Pm-MQd" id="L6j-if-W7j"/>
@@ -58,12 +59,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMU-ld-pSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="-493"/>
+            <point key="canvasLocation" x="158" y="-853"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="650-GU-Cbk">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="l5I-OX-gv5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="UcI-jR-2qb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S1C-Sf-dNZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lEY-va-X8q" kind="relationship" relationship="rootViewController" id="fI1-bx-c3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaA-ef-vFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="-853"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4Py-Fg-15i">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="j1n-qZ-qnb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ShC-9P-2DT"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RnC-lh-5Ik">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -71,14 +89,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lEY-va-X8q" kind="relationship" relationship="viewControllers" id="9pp-vX-WOi"/>
-                        <segue destination="gjY-uf-cxy" kind="relationship" relationship="viewControllers" id="YnN-SH-zAs"/>
-                        <segue destination="S4n-Er-Jwp" kind="relationship" relationship="viewControllers" id="H1W-sd-yxA"/>
+                        <segue destination="l5I-OX-gv5" kind="relationship" relationship="viewControllers" id="6aR-sz-9SY"/>
+                        <segue destination="gjY-uf-cxy" kind="relationship" relationship="viewControllers" id="lTO-4h-Lvi"/>
+                        <segue destination="S4n-Er-Jwp" kind="relationship" relationship="viewControllers" id="sEV-RM-Q5y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqc-U5-k8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-1196"/>
+            <point key="canvasLocation" x="-666" y="-452"/>
         </scene>
         <!--Browse View Controller - Browse-->
         <scene sceneID="RoM-AJ-uAu">
@@ -115,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT9-Wa-wA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-493"/>
+            <point key="canvasLocation" x="-198" y="-277"/>
         </scene>
         <!--Add View Controller - New-->
         <scene sceneID="zUS-DG-Ll0">
@@ -208,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTs-ST-bJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="-493"/>
+            <point key="canvasLocation" x="-198" y="283"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
