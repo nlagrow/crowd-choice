@@ -42,12 +42,34 @@
   [_parseObj[@"picture"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
     if (!error) {
       self.choiceTitle.text = parseObj[@"question"];
-      self.choiceLabel1.text = @"This one";
-      self.choiceLabel2.text = @"That one";
+      [self.thisOneButton setTitle:@"This One"
+                          forState:UIControlStateNormal];
+      [self.thatOneButton setTitle:@"That One"
+                          forState:UIControlStateNormal];
       UIImage *image = [UIImage imageWithData:data];
       [self.choiceImage setImage: image];
     }
   }];
+}
+- (IBAction)thisOne:(id)sender {
+  NSLog(@"This one");
+  CCChoiceViewController *viewController = [[CCChoiceViewController alloc] initWithNibName:@"CCChoiceViewController" bundle:nil];
+  viewController.parseObj = self.parseObj;
+  [self.navigationController pushViewController:viewController animated:YES];
+}
+- (IBAction)thatOne:(id)sender {
+  NSLog(@"That one");
+  CCChoiceViewController *viewController = [[CCChoiceViewController alloc] initWithNibName:@"CCChoiceViewController" bundle:nil];
+  viewController.parseObj = self.parseObj;
+  //[self.navigationController popViewControllerAnimated:YES];
+  //[self.navigationController pushViewController:viewController animated:YES];
+  
+  NSArray *viewCons = self.navigationController.viewControllers;
+  NSMutableArray *newCons = [[NSMutableArray alloc] init];
+  [newCons addObjectsFromArray:viewCons];
+  [newCons replaceObjectAtIndex:newCons.count - 1 withObject:viewController];
+  
+  [[self navigationController] setViewControllers:newCons];
 }
 
 @end

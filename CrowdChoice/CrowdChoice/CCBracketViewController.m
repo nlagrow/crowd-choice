@@ -7,6 +7,7 @@
 //
 
 #import "CCBracketViewController.h"
+#import "CCChoiceViewController.h"
 
 @interface CCBracketViewController ()
 @end
@@ -14,7 +15,7 @@
 @implementation CCBracketViewController
 - (IBAction)startBracket:(id)sender {
   //Initialize new viewController
-  CCBracketViewController *viewController = [[CCBracketViewController alloc] initWithNibName:@"CCBracketViewController" bundle:nil];
+  CCChoiceViewController *viewController = [[CCChoiceViewController alloc] initWithNibName:@"CCChoiceViewController" bundle:nil];
   viewController.parseObj = self.parseObj;
   [self.navigationController pushViewController:viewController animated:YES];
 }

@@ -12,8 +12,8 @@
 @interface CCChoiceViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *choiceTitle;
 @property (strong, nonatomic) IBOutlet UIImageView *choiceImage;
-@property (strong, nonatomic) IBOutlet UILabel *choiceLabel1;
-@property (strong, nonatomic) IBOutlet UILabel *choiceLabel2;
+@property (strong, nonatomic) IBOutlet UIButton *thisOneButton;
+@property (strong, nonatomic) IBOutlet UIButton *thatOneButton;
 
 @property (strong, nonatomic) PFObject *parseObj;
 @end
