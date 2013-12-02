@@ -134,10 +134,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  //Value Selected by user
-  NSString *selectedValue = [self.bracketObjects objectAtIndex:indexPath.row];
+  
   //Initialize new viewController
   CCBracketViewController *viewController = [[CCBracketViewController alloc] initWithNibName:@"CCBracketViewController" bundle:nil];
+  viewController.parseObj = [self.bracketObjects objectAtIndex:indexPath.row];
+  
   //Pass selected value to a property declared in NewViewController
   //viewController.valueToPrint = selectedValue;
   //Push new view to navigationController stack

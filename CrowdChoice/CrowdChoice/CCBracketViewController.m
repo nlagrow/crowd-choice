@@ -9,10 +9,11 @@
 #import "CCBracketViewController.h"
 
 @interface CCBracketViewController ()
-
 @end
 
 @implementation CCBracketViewController
+- (IBAction)startBracket:(id)sender {
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,5 +35,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setParseObj:(PFObject *)parseObj
+{
+  _parseObj = parseObj;
+  
+  [_parseObj[@"picture"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+    if (!error) {
+      self.bracketQuestionLabel.text = parseObj[@"question"];
+      self.bracketVotesLabel.text = [NSString stringWithFormat: @"%@",parseObj[@"votes"]];
+      UIImage *image = [UIImage imageWithData:data];
+      [self.bracketImage setImage: image];
+    }
+  }];
+}
+
 
 @end
