@@ -48,7 +48,7 @@
   
     PFQuery *query = [PFQuery queryWithClassName:@"Brackets"];
     [query orderByDescending:@"votes"];
-    query.limit = 4;
+    query.limit = 3;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -126,7 +126,7 @@
   [brackets_query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     if (!error)
     {
-      self.bracketObjects = [objects subarrayWithRange:NSMakeRange(0, 3)];
+      self.bracketObjects = [objects subarrayWithRange:NSMakeRange(0, 2)];
     }
     [self.homeTableView reloadData];
   }];

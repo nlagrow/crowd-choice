@@ -17,6 +17,7 @@
   //Initialize new viewController
   CCChoiceViewController *viewController = [[CCChoiceViewController alloc] initWithNibName:@"CCChoiceViewController" bundle:nil];
   viewController.parseObj = self.parseObj;
+    viewController.current = 0;
   [self.navigationController pushViewController:viewController animated:YES];
 }
 

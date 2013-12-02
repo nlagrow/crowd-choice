@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *choiceImage;
 @property (strong, nonatomic) IBOutlet UIButton *thisOneButton;
 @property (strong, nonatomic) IBOutlet UIButton *thatOneButton;
-
+@property(nonatomic, assign) NSUInteger current;
+@property(nonatomic, assign) NSUInteger maxim;
 @property (strong, nonatomic) PFObject *parseObj;
 @end
