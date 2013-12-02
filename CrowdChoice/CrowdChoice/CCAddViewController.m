@@ -25,9 +25,22 @@
   return self;
 }
 
+
 - (IBAction)saveBracket:(UIButton *)sender {
     //create a new class in parse.
     //create a new entry in the brackets table.
+    PFObject *newEntry = [PFObject objectWithClassName:@"Brackets"];
+    newEntry[@"votes"] = @0;
+    newEntry[@"choices"] = self.bracketOptions;
+    newEntry[@"question"] = self.questionField.text;
+    NSData *imgData= UIImageJPEGRepresentation(self.mainImage.image, 0.0);
+    PFFile *imageFile = [PFFile fileWithData:imgData];
+    newEntry[@"picture"] = imageFile;
+    [newEntry saveInBackground];
+    self.questionField.text = @"";
+    self.mainImage.image = NULL;
+    [self.bracketOptions removeAllObjects];
+    [self.optionsTable reloadData];
     
 }
 
