@@ -46,7 +46,7 @@
   [self loadObjects];
   
     PFQuery *query = [PFQuery queryWithClassName:@"Brackets"];
-    [query orderByAscending:@"votes"];
+    [query orderByDescending:@"votes"];
     query.limit = 4;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

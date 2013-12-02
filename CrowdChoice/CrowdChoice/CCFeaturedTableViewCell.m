@@ -30,7 +30,7 @@
 {
   _parseObj = parseObj;
   self.bracketTitle.text = parseObj[@"question"];
-  
+    NSLog(self.bracketTitle.text);
   [_parseObj[@"picture"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
     if (!error) {
       UIImage *image = [UIImage imageWithData:data];
