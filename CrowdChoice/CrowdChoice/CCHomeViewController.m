@@ -9,7 +9,11 @@
 #import "CCHomeViewController.h"
 
 @interface CCHomeViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *homeLogo;
+@property (strong, nonatomic) IBOutlet UIImageView *featuredImage;
+@property (strong, nonatomic) IBOutlet UITableView *homeTableView;
 
+- (IBAction)navigateToBrowse:(id)sender;
 @end
 
 @implementation CCHomeViewController
@@ -25,8 +29,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 	// Do any additional setup after loading the view.
+  [self.homeLogo setImage:[UIImage imageNamed: @"logo.png"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +40,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Switch to the browse tab
+- (IBAction)navigateToBrowse:(id)sender {
+  self.tabBarController.selectedViewController
+  = [self.tabBarController.viewControllers objectAtIndex:1];
+}
 @end

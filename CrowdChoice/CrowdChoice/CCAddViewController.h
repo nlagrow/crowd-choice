@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCAddViewController : UIViewController
+@interface CCAddViewController : UIViewController <UIImagePickerControllerDelegate,
+                                                   UITextViewDelegate,
+                                                   UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *questionField;
+@property (strong, nonatomic) IBOutlet UIImageView *mainImage;
+
+- (IBAction)mainImageButton:(id)sender;
 
 @end

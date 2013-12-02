@@ -25,8 +25,12 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+  [super viewDidLoad];
+	
+  // Set delegates so we can hide the keyboard
+  self.questionField.delegate = self;
+  
+  self.mainImage.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +38,100 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+  if([text isEqualToString:@"\n"]) {
+    [textView resignFirstResponder];
+    return NO;
+  }
+  return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField*)aTextField
+{
+  [aTextField resignFirstResponder];
+  return YES;
+}
+
+- (IBAction)mainImageButton:(id)sender {
+  UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+  imagePicker.delegate = self;
+}
+
+
+
+
+
+
+- (void)presentImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+{
+  UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+  imagePickerController.delegate = self;
+  imagePickerController.sourceType = sourceType;
+  imagePickerController.allowsEditing = YES;
+  [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+
+
+- (IBAction)pickPhoto:(UIButton *)sender
+{
+  // If the device does not have a camera, there is no reason to give the user an option.
+  if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    [self presentImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    return;
+  }
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Photo Picker"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                             destructiveButtonTitle:nil
+                                                  otherButtonTitles:@"Photo Library", @"Take Photo", nil];
+  [actionSheet showInView:self.view];
+}
+
+#pragma mark -
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+  // do nothing if the user cancels
+  if (buttonIndex == actionSheet.cancelButtonIndex) {
+    return;
+  }
+  [self presentImagePickerForSourceType:(buttonIndex == 0) ? UIImagePickerControllerSourceTypePhotoLibrary :
+   UIImagePickerControllerSourceTypeCamera];
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet
+{
+  // no-op
+}
+
+#pragma mark -
+#pragma mark UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+  self.imageView.image = [info objectForKey:UIImagePickerControllerEditedImage];
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
 
 @end
