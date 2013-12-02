@@ -39,12 +39,19 @@
                                     <action selector="navigateToBrowse:" destination="lEY-va-X8q" eventType="touchUpInside" id="XhA-lF-PG8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-Pm-MQd">
+                                <rect key="frame" x="17" y="155" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="HPU-pB-Fat"/>
                     <connections>
                         <outlet property="featuredImage" destination="XNX-AY-Wqm" id="JdN-K6-P3c"/>
+                        <outlet property="featuredTitle" destination="hnj-Pm-MQd" id="L6j-if-W7j"/>
                         <outlet property="homeLogo" destination="haz-kU-REe" id="cp7-QD-0Vl"/>
                         <outlet property="homeTableView" destination="OFr-f9-jwc" id="50h-Sk-jJZ"/>
                     </connections>
