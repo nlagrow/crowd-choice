@@ -73,11 +73,7 @@
   // Set delegates so we can hide the keyboard
   self.questionField.delegate = self;
   
-  self.mainImage.contentMode = UIViewContentModeScaleAspectFit;
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
+  self.mainImage.contentMode = UIViewContentModeScaleAspectFit; 
 }
 
 - (void)didReceiveMemoryWarning
