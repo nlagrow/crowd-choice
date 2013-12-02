@@ -7,6 +7,7 @@
 //
 
 #import "CCAddViewController.h"
+#import <Parse/Parse.h>
 
 @interface CCAddViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *optionsTable;
@@ -22,6 +23,12 @@
     // Custom initialization
   }
   return self;
+}
+
+- (IBAction)saveBracket:(UIButton *)sender {
+    //create a new class in parse.
+    //create a new entry in the brackets table.
+    
 }
 
 - (IBAction)addOption:(id)sender {
@@ -73,10 +80,10 @@
   
   self.optionsTable.delegate = self;
   self.optionsTable.dataSource = self;
-
-  self.mainImage.contentMode = UIViewContentModeScaleAspectFit;
   
   self.bracketOptions = [NSMutableArray new];
+  
+  self.mainImage.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (void)didReceiveMemoryWarning
