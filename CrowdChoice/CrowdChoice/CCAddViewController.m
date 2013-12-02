@@ -12,6 +12,7 @@
 @interface CCAddViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *optionsTable;
 @property (nonatomic, strong) NSMutableArray *bracketOptions;
+@property (nonatomic, strong) NSString *placeHolder;
 @end
 
 @implementation CCAddViewController
@@ -36,12 +37,23 @@
     NSData *imgData= UIImageJPEGRepresentation(self.mainImage.image, 0.0);
     PFFile *imageFile = [PFFile fileWithData:imgData];
     newEntry[@"picture"] = imageFile;
-    [newEntry saveInBackground];
-    self.questionField.text = @"";
-    self.mainImage.image = NULL;
-    [self.bracketOptions removeAllObjects];
-    [self.optionsTable reloadData];
-    
+    [newEntry saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        self.placeHolder = newEntry.objectId;
+        NSLog(self.placeHolder);
+            self.questionField.text = @"";
+            self.mainImage.image = NULL;
+            [self.bracketOptions removeAllObjects];
+            [self.optionsTable reloadData];
+            
+            PFObject *tableStart = [PFObject objectWithClassName:self.placeHolder];
+            tableStart[@"user"] = @"placeholder";
+            tableStart[@"complete"] = @NO;
+            tableStart[@"results"] = [NSNull null];
+            [tableStart saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                self.placeHolder = @"";
+                [tableStart deleteInBackground];
+            }];
+        }];
 }
 
 - (IBAction)addOption:(id)sender {
