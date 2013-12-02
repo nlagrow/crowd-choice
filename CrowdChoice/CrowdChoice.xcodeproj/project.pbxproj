@@ -33,6 +33,8 @@
 		74CE5631184C6824004AE4C6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE5630184C6824004AE4C6 /* Parse.framework */; };
 		74CE5638184D20D1004AE4C6 /* CCBracketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE5636184D20D1004AE4C6 /* CCBracketViewController.m */; };
 		74CE5639184D20D1004AE4C6 /* CCBracketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE5637184D20D1004AE4C6 /* CCBracketViewController.xib */; };
+		74CE563D184D2A68004AE4C6 /* CCChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE563B184D2A68004AE4C6 /* CCChoiceViewController.m */; };
+		74CE563E184D2A68004AE4C6 /* CCChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CE563C184D2A68004AE4C6 /* CCChoiceViewController.xib */; };
 		CA92CEA4184C5FD100EBF32B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA3184C5FD100EBF32B /* Parse.framework */; };
 		CA92CEA6184C602F00EBF32B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA5184C602F00EBF32B /* AudioToolbox.framework */; };
 		CA92CEA8184C603400EBF32B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA92CEA7184C603400EBF32B /* CFNetwork.framework */; };
@@ -93,6 +95,9 @@
 		74CE5635184D20D1004AE4C6 /* CCBracketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBracketViewController.h; sourceTree = "<group>"; };
 		74CE5636184D20D1004AE4C6 /* CCBracketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBracketViewController.m; sourceTree = "<group>"; };
 		74CE5637184D20D1004AE4C6 /* CCBracketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCBracketViewController.xib; sourceTree = "<group>"; };
+		74CE563A184D2A68004AE4C6 /* CCChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCChoiceViewController.h; sourceTree = "<group>"; };
+		74CE563B184D2A68004AE4C6 /* CCChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCChoiceViewController.m; sourceTree = "<group>"; };
+		74CE563C184D2A68004AE4C6 /* CCChoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCChoiceViewController.xib; sourceTree = "<group>"; };
 		CA92CEA3184C5FD100EBF32B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CA92CEA5184C602F00EBF32B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CA92CEA7184C603400EBF32B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -200,6 +205,9 @@
 				74B98BF6183FFDCC00F3B6F8 /* CCHomeViewController.m */,
 				74CE5635184D20D1004AE4C6 /* CCBracketViewController.h */,
 				74CE5636184D20D1004AE4C6 /* CCBracketViewController.m */,
+				74CE563A184D2A68004AE4C6 /* CCChoiceViewController.h */,
+				74CE563B184D2A68004AE4C6 /* CCChoiceViewController.m */,
+				74CE563C184D2A68004AE4C6 /* CCChoiceViewController.xib */,
 				74CE5637184D20D1004AE4C6 /* CCBracketViewController.xib */,
 				74B98BF8183FFDDB00F3B6F8 /* CCAddViewController.h */,
 				74B98BF9183FFDDB00F3B6F8 /* CCAddViewController.m */,
@@ -320,6 +328,7 @@
 			files = (
 				74CE562F184C57A0004AE4C6 /* CCAddTableViewCell.xib in Resources */,
 				74CE56291846F11F004AE4C6 /* logo.png in Resources */,
+				74CE563E184D2A68004AE4C6 /* CCChoiceViewController.xib in Resources */,
 				74CE562D184C577C004AE4C6 /* CCFeaturedTableViewCell.xib in Resources */,
 				7427BA81183D0A3100C2F048 /* Images.xcassets in Resources */,
 				7427BA70183D0A3100C2F048 /* InfoPlist.strings in Resources */,
@@ -351,6 +360,7 @@
 				74B98BF7183FFDCC00F3B6F8 /* CCHomeViewController.m in Sources */,
 				74B98C03183FFE6E00F3B6F8 /* CCFeaturedTableViewCell.m in Sources */,
 				7427BA76183D0A3100C2F048 /* CCAppDelegate.m in Sources */,
+				74CE563D184D2A68004AE4C6 /* CCChoiceViewController.m in Sources */,
 				74B98BFA183FFDDB00F3B6F8 /* CCAddViewController.m in Sources */,
 				7427BA72183D0A3100C2F048 /* main.m in Sources */,
 			);

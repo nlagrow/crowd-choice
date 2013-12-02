@@ -1,23 +1,18 @@
 //
-//  CCBracketViewController.m
+//  CCChoiceViewController.m
 //  CrowdChoice
 //
 //  Created by Nick LaGrow on 12/2/13.
 //  Copyright (c) 2013 nlagrow.pmarino. All rights reserved.
 //
 
-#import "CCBracketViewController.h"
+#import "CCChoiceViewController.h"
 
-@interface CCBracketViewController ()
+@interface CCChoiceViewController ()
+
 @end
 
-@implementation CCBracketViewController
-- (IBAction)startBracket:(id)sender {
-  //Initialize new viewController
-  CCBracketViewController *viewController = [[CCBracketViewController alloc] initWithNibName:@"CCBracketViewController" bundle:nil];
-  viewController.parseObj = self.parseObj;
-  [self.navigationController pushViewController:viewController animated:YES];
-}
+@implementation CCChoiceViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,13 +41,13 @@
   
   [_parseObj[@"picture"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
     if (!error) {
-      self.bracketQuestionLabel.text = parseObj[@"question"];
-      self.bracketVotesLabel.text = [NSString stringWithFormat: @"%@",parseObj[@"votes"]];
+      self.choiceTitle.text = parseObj[@"question"];
+      self.choiceLabel1.text = @"This one";
+      self.choiceLabel2.text = @"That one";
       UIImage *image = [UIImage imageWithData:data];
-      [self.bracketImage setImage: image];
+      [self.choiceImage setImage: image];
     }
   }];
 }
-
 
 @end
