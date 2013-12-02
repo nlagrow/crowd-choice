@@ -8,10 +8,12 @@
 
 #import "CCBrowseViewController.h"
 #import "CCBrowseTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface CCBrowseViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *browseTableView;
 @property (nonatomic, strong) NSArray *bracketObjects;
+@property (nonatomic, assign) BOOL top;
 @end
 
 @implementation CCBrowseViewController
@@ -28,12 +30,54 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+    self.top = YES;
   self.browseTableView.delegate = self;
   self.browseTableView.dataSource = self;
 
   [self.browseTableView registerNib:[UINib nibWithNibName:@"CCBrowseTableViewCell" bundle:nil] forCellReuseIdentifier:@"CCBrowseTableViewCell"];
   
   [self loadObjects];
+    
+}
+- (IBAction)switchSort:(id)sender {
+    self.top = !(self.top);
+    if (self.top) {
+        PFQuery *brackets_query = [PFQuery queryWithClassName:@"Brackets"];
+        
+        // Initially sort by number of votes
+        [brackets_query orderByDescending:@"votes"];
+        [brackets_query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            NSLog(@"hi");
+            if (!error)
+            {
+                NSLog(@"helllooooo");
+                self.bracketObjects = objects;
+                NSLog(@"%ld", (long)self.bracketObjects.count);
+            }
+            [self.browseTableView reloadData];
+        }];
+    }
+    else {
+        PFQuery *brackets_query = [PFQuery queryWithClassName:@"Brackets"];
+        
+        // Initially sort by number of votes
+        [brackets_query orderByDescending:@"createdAt"];
+        [brackets_query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            NSLog(@"hi");
+            if (!error)
+            {
+                NSLog(@"helllooooo");
+                self.bracketObjects = objects;
+                NSLog(@"%ld", (long)self.bracketObjects.count);
+            }
+            [self.browseTableView reloadData];
+        }];
+    }
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [self loadObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,8 +103,8 @@
 {
   static NSString *CellIdentifier = @"CCBrowseTableViewCell";
   CCBrowseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-  cell.parseObj = [self.bracketObjects objectAtIndex:indexPath.row];
-  return cell;
+    cell.parseObj = [self.bracketObjects objectAtIndex:indexPath.row];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,14 +117,14 @@
   PFQuery *brackets_query = [PFQuery queryWithClassName:@"Brackets"];
   
   // Initially sort by number of votes
-  [brackets_query orderByDescending:@"createdAt"];
+  [brackets_query orderByDescending:@"votes"];
   [brackets_query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     NSLog(@"hi");
     if (!error)
     {
       NSLog(@"helllooooo");
       self.bracketObjects = objects;
-      NSLog(@"%@", self.bracketObjects);
+      NSLog(@"%ld", (long)self.bracketObjects.count);
     }
     [self.browseTableView reloadData];
   }];

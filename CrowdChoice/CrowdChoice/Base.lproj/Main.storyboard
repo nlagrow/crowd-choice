@@ -122,6 +122,9 @@
                                     <segment title="Top"/>
                                     <segment title="Recent"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchSort:" destination="gjY-uf-cxy" eventType="valueChanged" id="QAa-KO-dlT"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
